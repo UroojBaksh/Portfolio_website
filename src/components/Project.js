@@ -59,7 +59,7 @@ const Project = () => {
     {
       title: "Sentimental Anlysis of Student Feedback",
       description: "This research aimed to compare different machine learning algorithms and deep learning techniques for developing an effective sentiment classification system for instructors. In this study, I analyzed student feedback consisting of 19000 comments and trained various machine learning and deep learning algorithms using several feature extraction techniques. Among the different algorithms employed, a cascading neural network consisting of CNN combined with LSTM using Glove word embedding outperformed all the other architecture giving an accuracy of 91.27 %.",
-      link:"",
+      link:"https://uroojbaksh-ba629.web.app/research",
     },
     {
       title: "Fake news Detection",

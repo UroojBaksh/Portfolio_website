@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Viewer } from '@react-pdf-viewer/core'; 
 import { getFilePlugin} from '@react-pdf-viewer/get-file';
 import '@react-pdf-viewer/core/lib/styles/index.css';
+import Navbar from "./Navbar";
 
 
 
@@ -27,6 +28,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
         width: '65%',
         marginLeft:'350px',
         paddingRight:'0px'}} >
+          <Navbar />
     <div
     className="rpv-core__viewer"
     style={{

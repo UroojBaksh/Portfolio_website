@@ -7,9 +7,9 @@ import WebDesign from "./WebDesign";
 const data = [
   "Web Design",
   "Development",
-  "Illustration",
+  "Analytics",
   "Product Design",
-  "Social Media",
+  "Dashboards",
 ];
 
 const Section = styled.div`
@@ -59,36 +59,23 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+  background: linear-gradient(#da4ea2, #da4ea2);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
 
   @media only screen and (max-width: 768px) {
     font-size: 24px;
     color: white;
     -webkit-text-stroke: 0px;
-  }
-
-  ::after {
-    content: "${(props) => props.text}";
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: pink;
-    width: 0px;
-    overflow: hidden;
-    white-space: nowrap;
+    background: none;
   }
 
   &:hover {
-    ::after {
-      animation: moveText 0.5s linear both;
-
-      @keyframes moveText {
-        to {
-          width: 100%;
-        }
-      }
-    }
+    background-size: 100% 100%;
   }
 `;
+
 
 const Right = styled.div`
   flex: 1;

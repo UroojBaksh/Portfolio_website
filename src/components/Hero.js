@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Who from "./Who";
 import Works from "./Works";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
@@ -41,7 +42,7 @@ const Bar =styled.div`
   left: 0;
   right: 0;
   z-index: 1;
-  margin-top: 20px;
+  margin-top: 5px;
 
 `;
 const Left = styled.div`
@@ -109,8 +110,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 700px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -128,6 +129,7 @@ const Img = styled.img`
   @keyframes animate {
     to {
       transform: translateY(20px);
+      transform: translateX(20px);
     }
   }
 `;
@@ -149,25 +151,26 @@ const Hero = () => {
           <Desc>
             I enjoy creating delightful, human-centered digital experiences driving  meaningful insights.
           </Desc>
-          <Button>Learn More</Button>
+          <Button  onClick={() => window.open('https://github.com/UroojBaksh')} >Learn More</Button>
         </Left>
         <Right>
-          <Canvas >
+          <Canvas style={{width:'850', hieght:'600',}}>
             <Suspense fallback={null}>
              <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={2.4}>
+              <Sphere args={[1.6, 100, 200]} scale={2.4}>
                 <MeshDistortMaterial
                   color="#3d1c56"
                   attach="material"
                   distort={0.5}
-                  speed={2}
+                  speed={3}
                 />
               </Sphere>
             </Suspense>
           </Canvas>
-          <Img src="./img/moon.png" />
+          <Img src="./img/b.png" />
+      
         </Right>
       </Container>
     </Section>

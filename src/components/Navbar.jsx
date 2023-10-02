@@ -33,6 +33,15 @@ const StyledLink = styled(Link)`
     text-decoration: underline;
     color:#da4ea2;
 `;
+const StyleddLink = styled(Link)`
+  color: white;
+  text-decoration: none;  /* This will remove the underline */
+  font-weight: 500;
+  font-size: 25px;
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.5;
+`;
 const Links = styled.div`
   display: flex;
   align-items: center;
@@ -65,7 +74,7 @@ const Icons = styled.div`
 `;
 
 const Icon = styled.img`
-  width: 20px;
+  width: 40px;
   cursor: pointer;
 `;
 
@@ -84,7 +93,8 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/Capturelogo.png" />
+          <Logo src="./img/Capturelogo.PNG" />
+        
           <List>
           <StyledLink to="/">Home</StyledLink>
           <StyledLink to="/research">Research</StyledLink>
@@ -94,8 +104,8 @@ const Navbar = () => {
         </Links>
         <Icons>
           {/* Changed the image due to copyright problems */}
-          <Icon src="./img/search.png" />
-          <Button><StyledLink to="/contact" >Hire Now </StyledLink></Button>
+          <Icon src="./img/mail.png" />
+          <Button><StyleddLink to="/contact" >Hire Now </StyleddLink></Button>
         </Icons>
       </Container>
     </Section>
